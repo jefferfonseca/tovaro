@@ -1,0 +1,33 @@
+  div ul> li{
+    padding:15px;
+    border: 40px;
+    border-color: white; 
+}
+
+#side{
+    min-height: 600px;
+    background-color:  rgba(0, 0, 0, 0.719);
+}
+.parallax-container{
+    padding-bottom: 0;
+}
+
+#playlist{
+  background-color: rgba(0, 0, 0, 0.719);
+}
+
+.playlist-element:hover{
+  background-color: rgba(112, 108, 108, 0.87);
+}
+footer{
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+    #side{
+      min-height: 700px;
+      background-color:  rgba(0, 0, 0, 0.719);
+    }
+}

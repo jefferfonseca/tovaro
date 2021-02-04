@@ -1,0 +1,103 @@
+section {
+    width: 100%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: Helvetica;
+    border-top: 5px solid rgba(195, 150, 3, 0.8);
+}
+#franja-gris {
+    background: rgba(249, 249, 249, 0.8);
+}
+.contenido {
+    width: 900px;
+    margin: auto;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+.titulo {
+    color: #045184;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.columnas {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+}
+.columnas p {
+    padding: 5px 20px;
+}
+
+.img-vision-2 {
+    /*esta imagen se oculta cuando hay dos columnasy se muestra cuando hay una por cuestioes de organizacion*/
+    display: none;
+}
+.columnas3 {
+    -webkit-column-count: 3;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 3;
+    /* Firefox */
+    column-count: 3;
+}
+.columnas3 h2 {
+    color: #045184;
+    width: 120px;
+    text-align: center;
+}
+.docs {
+    width: 120px;
+    margin: auto;
+}
+.audios {
+    width: 90%;
+    margin: auto;
+    color: #045184;
+}
+.audios h2 {
+    padding: 10px;
+}
+audio {
+    width: 100%;
+    padding-left: 25px;
+}
+@media screen and (max-width:950px) {
+    /*evento q se dispara cuando el tamaño de la pantalla es 950px*/
+}
+@media screen and (max-width:720px) {
+    .titulo {
+    text-align: center;
+    }
+    /*evento q se dispara cuando el tamaño de la pantalla es 600px*/
+    .contenido {
+        width: 100%;
+        height: auto;
+    }
+    .columnas {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+    }
+    .img-vision-1 {
+        /*esta imagen se oculta cuando hay dos columnasy se muestra cuando hay una por cuestioes de organizacion*/
+        display: none;
+    }
+    .img-vision-2 {
+        /*esta imagen se oculta cuando hay dos columnasy se muestra cuando hay una por cuestioes de organizacion*/
+        display: block;
+    }
+   }
+@media screen and (max-width:340px) {
+  
+    .columnas3 {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1;
+    }
+}

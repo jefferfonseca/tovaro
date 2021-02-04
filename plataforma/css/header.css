@@ -1,0 +1,52 @@
+:root {
+  --azul: #1565c0;
+}
+
+body {
+  /* background-image: url("../images/fondo.png"); */
+  font-family: 'Playfair Display', serif;
+  background-color: var(--azul);
+  color: white;
+}
+
+header {
+  background-color: var(--azul);
+  position: relative;
+}
+
+.header * {
+  margin: 10px 10px 0px 10px;
+  padding: 0px;
+}
+
+div.row {
+  margin: 0px;
+}
+
+/* fixed navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/*super pone el menú responsive*/
+#lista_responsive{
+  z-index: inherit;
+}
+
+
+ul>.dropdown-content #institucion{
+padding-top: 150px; background-color: transparent;
+}
+
+/* On smaller screens, decrease text size */
+/*para fijar el header con el nombre del colegio  el escudo
+ @media only screen and (max-width: 300px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+} */
