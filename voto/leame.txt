@@ -1,5 +1,5 @@
 ﻿**************************************
-INSTALACION EDUCOVOTA PORTABLE V.12.4
+INSTALACION  PORTABLE V.12.4
 **************************************
 
 1. Luego de descomprimir el archivo zip, ingrese a la carpeta y de doble clic al archivo "usbwebserver", para iniciar el servidor Web Apache y la base de datos Mysql.

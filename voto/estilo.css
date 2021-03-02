@@ -24,7 +24,7 @@ h2 {
 	font-size: 1.4em;
 	border-top: 3px solid #1565c0;
 	border-bottom: 1px solid #1565c0;
-	background-color: #F6F8F3;
+	background-color: #1565c0;
 	padding: 0 0 2px 5px;
 }
 table {
@@ -38,13 +38,13 @@ table {
 thead th {
 	background-color:#1565c0;
 	height: 47px;
-	color: #fffdfd;
+	color: #1565c0;
 	font-size: 12pt;
 	font-weight: bold;
 	padding: 0px 7px;
 	margin: 20px 0px 0px;
 	text-align: center;
-	border-right: 1px solid #FCF1D4;
+	border-right: 1px solid #ffffff;
 }
 .cen {
 	text-align: center;
@@ -57,12 +57,12 @@ thead th {
 	text-align: justify;
 }
 .txtinicial {
-        background-color:#ffca5e;
+        background-color:#ffffff;
         padding: 20px 10px 10px 10px;
 }
 
 tbody tr.odd {
-	background: #FFF8E8 url(bg_td2.jpg) repeat-x;
+	background: #1565c0 url(bg_td2.jpg) repeat-x;
 }
 
 tbody th,td {
@@ -71,7 +71,7 @@ tbody th,td {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #000;
 	padding: 10px 7px;
-	border-top: 1px solid #FFCA5E;
+	border-top: 1px solid #1565c0;
 	border-right: 1px solid #DDDDDD;
 	text-align: justify;
 }

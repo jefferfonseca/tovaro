@@ -23,7 +23,8 @@ if(isset($_COOKIE['VotaDatAdmin'])) {
 	while($row5 = mysql_fetch_array($resp5)) {
 	
 		echo '<div align="center">';
-		echo '<p class="txtinicial">RESULTADOS '.cambia_mayuscula($row5['descripcion']).'</p>';
+		//echo '<p class="txtinicial">RESULTADOS '.cambia_mayuscula($row5['descripcion']).'</p>';
+		echo '<p class="txtinicial">RESULTADOS CANDIDATOS A LA PERSONERÍA</p>';
 		echo '<table>';
 		echo '<thead><tr><th>GRADO</th>';		
 		$resp4=mysql_query(sprintf("select nombres,apellidos from candidatos where representante=%d order by apellidos DESC",$row5['id'],$link));		

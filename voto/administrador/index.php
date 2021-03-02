@@ -20,7 +20,7 @@ if ($_POST['usuario']=="") {
 
 if ($_POST['clave']=="") {
 	include_once("encabezado.html");
-	print "<strong>No ha escrito la contraseña de acceso<br />";
+	print "<strong>No ha escrito la contrase&ntildea de acceso<br />";
 	print"<br /><a href='javascript:history.go(-1)'>Volver al formulario</a></strong></div></body></html>";
 	exit;
 }
@@ -44,7 +44,7 @@ function LogControl($faccion2, $idest2) {
 		echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
 		echo '<html>';
 		echo '<head>';
-		echo '<title>'.$leer['institucion'].' - Administración EducoVota</title>';
+		echo '<title>'.$leer['institucion'].'Administraci&oacuoten </title>';
 		echo '<link href="../estilo4.css" rel="stylesheet" type="text/css" />';
 		echo '</head>';
 		echo '<body>';
@@ -52,19 +52,19 @@ function LogControl($faccion2, $idest2) {
 		echo '<div align="center">';
 		$faccion="Ingreso_Admin-".$_POST['usuario'];
 		LogControl($faccion,$row['id']);
-		echo '<h2>EDUCOVOTA - BIENVENIDO(A): '.$row['nombres'].' '.$row['apellidos'].'</h2>';
+		echo '<h2>BIENVENIDO(A): '.$row['nombres'].' '.$row['apellidos'].'</h2>';
 		echo '<table style="font-weight:bold";>';
-		echo '<thead><tr><th>MENÚ DE ADMINISTRACIÓN</th></tr></thead>';
-		echo '<tr><td><a href="javascript:NuevaVentana(\'resultados.php\')" title="Consultar resultados de votación"><img src="../iconos/box.png" border="0" alt="Folder" /> Resultados de votación</a></td></tr>';
+		echo '<thead><tr><th>MEN&Uacute DE ADMINISTRACI&OacuteN</th></tr></thead>';
+		echo '<tr><td><a href="javascript:NuevaVentana(\'resultados.php\')" title="Consultar resultados de votaci&oacuoten"><img src="../iconos/box.png" border="0" alt="Folder" /> Resultados de votaci&oacuten</a></td></tr>';
 		echo '<tr><td><a href="javascript:NuevaVentana(\'general.php\')" title="Consulta de estudiantes por grado"><img src="../iconos/folder.png" border="0" alt="Folder" /> Consulta de estudiantes por grado</a></td></tr>';
 		if ($row['id']==1) {
 			echo '<tr><td><a href="javascript:NuevaVentana(\'candidatos.php\')" title="Candidatos"><img src="../iconos/datos.png" border="0" alt="Folder" /> Lista de Candidatos</a></td></tr>';
 			echo '<tr><td><a href="javascript:NuevaVentana(\'importar.php\')" title="Importar datos"><img src="../iconos/book.png" border="0" alt="Datos" /> Importar datos estudiantes</a></td></tr>';
 			echo '<tr><td><a href="javascript:NuevaVentana(\'administradores.php?id='.md5($row['id']).'\')" title="Administradores del sistema"><img src="../iconos/users.png" border="0" alt="Datos" /> Administradores del sistema</a></td></tr>';
-            echo '<tr><td><a href="javascript:NuevaVentana(\'configuraciones.php\')" title="Configuración general"><img src="../iconos/hoja.png" border="0" alt="Config" /> Configuración general</a></td></tr>';
+            echo '<tr><td><a href="javascript:NuevaVentana(\'configuraciones.php\')" title="Configuraci&oacuoten general"><img src="../iconos/hoja.png" border="0" alt="Config" /> Configuraci&oacuten general</a></td></tr>';
 		}
-		echo '<tr><td><a href="javascript:NuevaVentana(\'bitacora.php\')" title="Bitácora del sistema"><img src="../iconos/find.png" border="0" alt="bitácora" /> Bitácora del sistema</a></td></tr>';
-		echo '<tr><td><a href="javascript:NuevaVentana(\'cambiarclave.php?id='.md5($row['id']).'\')" title="Cambiar contraseña de acceso"><img src="../iconos/clave.png" border="0" alt="Clave" /> Cambiar contraseña</a></td></tr>';
+		echo '<tr><td><a href="javascript:NuevaVentana(\'bitacora.php\')" title="Bit&aacuotecora del sistema"><img src="../iconos/find.png" border="0" alt="bit&aacuotecora" /> Bit&aacutencora del sistema</a></td></tr>';
+		echo '<tr><td><a href="javascript:NuevaVentana(\'cambiarclave.php?id='.md5($row['id']).'\')" title="Cambiar contrasea de acceso"><img src="../iconos/clave.png" border="0" alt="Clave" /> Cambiar contrase&ntildea</a></td></tr>';
 		echo '<tr><td><a href="salir.php" title="Salir del sistema"><img src="../iconos/salir.png" border="0" alt="Salir" /> Salir del sistema</a></td></tr>';
 		echo '</table>';
 		echo '</div>';
@@ -78,7 +78,7 @@ function LogControl($faccion2, $idest2) {
 		$faccion="Fallido_Admin-".$_POST['usuario'];
 		LogControl($faccion,0);
 		echo '<table>';
-		echo '<tr><td class="cen" colspan="2"><strong>Datos de ingreso inválidos<br /><br />';
+		echo '<tr><td class="cen" colspan="2"><strong>Datos de ingreso inv&aacutenlidos<br /><br />';
 		echo '<a href="javascript:history.go(-1)">Volver a intentar</a></strong></td></tr>';
 		echo '</table></div></body></html>';
 	}
