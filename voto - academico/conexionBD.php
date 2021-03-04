@@ -7,7 +7,7 @@ function conectarse()
 //Conexion remota
 
 $db_host="host17.latinoamericahosting.com:3306"; // Host BD al que conectarse, habitualmente es localhost
-$db_nombre="tovaroed_dx1"; // Nombre de la Base de Datos que se desea utilizar
+$db_nombre="tovaroed_academico"; // Nombre de la Base de Datos que se desea utilizar
 $db_user="tovaroed_dx"; // Nombre del usuario con permisos para acceder a la BD
 $db_pass="1049629422SantiF*"; // contrase&ntildea del usuario de la BD
 

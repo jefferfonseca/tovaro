@@ -165,14 +165,16 @@ CREATE TABLE IF NOT EXISTS `grados` (
 --
 
 INSERT INTO `grados` (`id`, `grado`) VALUES
-(1, 'PRIMERO'),
-(2, 'SEGUNDO'),
-(3, 'TERCERO'),
-(4, 'CUARTO'),
-(5, 'QUINTO'),
-(6, 'SEXTO'),
-(7, 'SEPTIMO'),
-(8, 'OCTAVO'),
-(9, 'NOVENO'),
-(10, 'DECIMO'),
-(11, 'UNDECIMO');
+(1, 'JARDIN'),
+(2, 'TRANSICIÓN'),
+(3, 'PRIMERO'),
+(4, 'SEGUNDO'),
+(5, 'TERCERO'),
+(6, 'CUARTO'),
+(7, 'QUINTO'),
+(8, 'SEXTO'),
+(9, 'SEPTIMO'),
+(10, 'OCTAVO'),
+(11, 'NOVENO'),
+(12, 'DECIMO'),
+(13, 'UNDECIMO');
