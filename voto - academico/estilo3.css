@@ -10,11 +10,11 @@ a:hover {
 p{
 	font-size: 0.9em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #221C76;
 	text-align: justify;
 }
 h1 {
-        color:#221C76;
+    color:#221C76;
 	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: underline;
@@ -26,7 +26,8 @@ h2 {
 	border-top: 3px solid #221C76;
 	border-bottom: 1px solid #221C76;
 	background-color: #F6F8F3;
-	padding: 0 0 2px 5px;
+	padding: 20px 0px 20px 5px;
+	margin:0;
 }
 table {
 	margin-left:10px;
@@ -37,7 +38,7 @@ table {
 thead th {
 	background-color:#221C76;
 	height: 47px;
-	color: #fffdfd;
+	color: #221C76;
 	font-size: 0.8em;
 	font-weight: bold;
 	padding: 0px 7px;
@@ -56,7 +57,7 @@ thead th {
 .desc {
 	font-size: 0.8em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #221C76;
 	text-align: justify;
 }
 
@@ -68,7 +69,7 @@ tbody th,td {
 	font-size: 0.8em;
 	line-height: 1.4em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #221C76;
 	padding: 10px 7px;
 	border-top: 1px solid #fff;
 	border-right: 1px solid #fff;

@@ -9,11 +9,11 @@ a:hover {
 p{
 	font-size: 0.9em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #ffffff;
 	text-align: justify;
 }
 h1 {
-        color:#221C76;
+	color:#221C76;
 	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: underline;
@@ -53,7 +53,7 @@ thead th {
 .desc {
 	font-size: 0.8em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #ffffff;
 	text-align: justify;
 }
 .txtinicial {
@@ -69,7 +69,7 @@ tbody th,td {
 	font-size: 0.8em;
 	line-height: 1.4em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #ffffff;
 	padding: 10px 7px;
 	border-top: 1px solid #221C76;
 	border-right: 1px solid #DDDDDD;

@@ -72,22 +72,24 @@ $resp2=mysql_query(sprintf("select id_estudiante from voto, estudiantes where do
 		echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
 		echo '<html>';
 		echo '<head>';
-		echo '<title>'.$leer['institucion'].' - Tarjet&oacuten de votaci&oacuten</title>';
+		echo '<title>Institución Educativa Académico de Paipa</title> 
+		<meta  content="text/html" charset= "UTF-8"/';
+		echo '<meta name="description" content="Sitio Web Oficial de la Institución Educativa Académico de Paipa">';
 		echo '<link href="estilo4.css" rel="stylesheet" type="text/css" />';
-
+		echo '<link rel="icon" href="iconos/EscudoColegio.png" type="image/png" width=70px height=90px/>';
 		echo '</head>';
 		echo '<body>';
 		echo '<div align="center">';
 		$faccion="Ingreso-".$DocEst;
 		LogControl($faccion,$row['id']);
-		echo '<div class="nombrevota"; font-weight: bold;">ESTUDIANTE: '.$row['nombres'].' '.$row['apellidos'].'</div>';
-		echo '<img src="iconos/EscudoColombia.png" style="display:scroll;position:fixed; top:35px;left:150px;" width="110" alt="Escudo de Colombia" />';
-		echo '<img src="iconos/EscudoColegio.png" style="display:scroll;position:fixed; top:35px;right:150px;" width="80" alt="EscudoColegio" /><br />';
+		echo '<div class="nombrevota"; font-weight: bold; margin:0;">ESTUDIANTE: '.$row['nombres'].' '.$row['apellidos'].'</div><br>';
+		echo '<img src="iconos/Escud.png" style="display:scroll;position:absolute; top:35px; left:40px;" width="50px" alt="EscudoColegio" /><br />';
+		echo '<img src="iconos/EscudoColegio.png" style="display:scroll;position:absolute; top:35px; right:40px;" width="80px" alt="EscudoColegio" /><br />';
         //Variable que guarda las categorias que se muestran en el tarjeton
         $catarj="";
 		echo '<form name="votacion" action="votacion.php" method="post">';
-		echo '<h2>'.$leer['institucion'].'<br />';
-		echo $leer['descripcion'].'<br /></h2>';
+		echo '<h2 style="font-size: 2em; ">'.$leer['institucion'].'<br />';
+		echo '<spam style="font-size: 0.8em; ">'.$leer['descripcion'].'</spam></h2><br /><br />';
 		echo '<table style="font-weight:bold";>';						
 		echo '<thead><tr><th>TARJET&OacuteN ELECTORAL</th></tr></thead>';		
 		echo '<tr>';
@@ -114,10 +116,10 @@ $resp2=mysql_query(sprintf("select id_estudiante from voto, estudiantes where do
                 $catarj = $catarj . $row5['id'] . ",";
                 echo '<div align="center">';
     			echo '<table style="font-weight:bold";>';
-	    		echo '<thead><tr><th colspan="'.$row8[0].'" class="vto";>'.$row5['descripcion'].'</th></tr></thead>';
+	    		echo '<thead><tr><th" colspan="'.$row8[0].'" class="vto"><span style="color:#fff;">'.$row5['descripcion'].'</span></th></tr></thead>';
 		    	echo '<tr>';
     			# MOSTRAR CANDIDATOS
-	    		$resp3=mysql_query(sprintf("select * from candidatos where representante=%d order by apellidos DESC",$row5['id']),$link);
+	    		$resp3=mysql_query(sprintf("select * from candidatos where representante=%d order by Id ASC",$row5['id']),$link);
 		    	while($row3 = mysql_fetch_array($resp3)) {
     				echo '<td class="cen cd">';
 	    			if ((file_exists ('fotos/'.$row3['id'].'.jpg'))||(file_exists ('fotos/'.$row3['id'].'.png'))||(file_exists ('fotos/'.$row3['id'].'.gif'))) {

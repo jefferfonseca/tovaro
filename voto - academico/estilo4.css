@@ -10,23 +10,23 @@ a:hover {
 p{
 	font-size: 0.9em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #fff;
 	text-align: justify;
 }
 h1 {
-        color: #221C76;
-        font-size: 1.4em;
-        text-align:center;
-        text-decoration: none;
+    color: #221C76;
+    font-size: 1.4em;
+    text-align:center;
+    text-decoration: none;
 }
 h2 {
-        color: #221C76;
-        text-align: center;
-        font-size: 1em;
-        border-top: 3px solid #221C76;
-        border-bottom: 1px solid #221C76;
-        background-color: #F6F8F3;
-        padding: 0 0 2px 5px;
+    color: #221C76;
+    text-align: center;
+    font-size: 1em;
+    border-top: 3px solid #221C76;
+    border-bottom: 1px solid #221C76;
+    background-color: #F6F8F3;
+    padding: 0 0 2px 5px;
 }
 table {
 	margin: 5px 5px 5px 5px ;
@@ -39,7 +39,7 @@ table {
 thead th {
 	background-color:#221C76;
 	height: 47px;
-	color: #fffdfd;
+	color: #ffff;
 	font-size: 12pt;
 	font-weight: bold;
 	padding: 0px 7px;
@@ -52,9 +52,9 @@ thead th {
 }
 
 .nombrevota {
-        background-color:#221C76;
-        padding: 5px 5px 5px 5px;
-	color: #fff;
+	background-color:#221C76;
+	padding: 5px 5px 5px 5px;
+	color: #221C76;
 	font-size: 8pt;
 	font-family: arial, helvetica, sans-serif;
 	font-weight: bold;
@@ -63,7 +63,7 @@ thead th {
 .vto {
 	background-color:#221C76;
 	height: 47px;
-	color: #000;
+	color: #221C76;
 	font-size: 10pt;
 	font-weight: bold;
 	padding: 0px 7px;
@@ -73,10 +73,11 @@ thead th {
 }
 
 .txtinicial {
-    background-color:#221C76;
+    background-color:#fff;
     padding: 20px 10px 10px 10px;
 	text-align: center;
 	font-weight: bold;
+	color:#fff;
 	border:3px solid #221C76;
 }
 
@@ -95,7 +96,7 @@ tbody th,td {
 	font-size: 0.8em;
 	line-height: 1.4em;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #fff;
 	padding: 4px 7px;
 	border-top: 1px solid #221C76;
 	border-right: 1px solid #DDDDDD;
@@ -103,11 +104,18 @@ tbody th,td {
 }
 
 td.cd:hover {
-	background-color:#221C76;
+	background-color:#221c7691;
+}
+td.cd {
+	color: #000;
 }
 .enlace {
 	color: #221C76;
 	font-family: arial, helvetica, sans-serif;
 	font-weight: bold;
 	text-decoration: underline;
+}
+
+label{
+	color: #221C76;
 }

@@ -45,6 +45,7 @@ function LogControl($faccion2, $idest2) {
 		echo '<html>';
 		echo '<head>';
 		echo '<title>'.$leer['institucion'].'Administraci&oacuoten </title>';
+		echo '<link rel="icon" href="../iconos/EscudoColegio.png" type="image/png" width=70px height=90px/>';
 		echo '<link href="../estilo4.css" rel="stylesheet" type="text/css" />';
 		echo '</head>';
 		echo '<body>';
@@ -65,7 +66,7 @@ function LogControl($faccion2, $idest2) {
 		}
 		echo '<tr><td><a href="javascript:NuevaVentana(\'bitacora.php\')" title="Bit&aacuotecora del sistema"><img src="../iconos/find.png" border="0" alt="bit&aacuotecora" /> Bit&aacutencora del sistema</a></td></tr>';
 		echo '<tr><td><a href="javascript:NuevaVentana(\'cambiarclave.php?id='.md5($row['id']).'\')" title="Cambiar contrasea de acceso"><img src="../iconos/clave.png" border="0" alt="Clave" /> Cambiar contrase&ntildea</a></td></tr>';
-		echo '<tr><td><a href="salir.php" title="Salir del sistema"><img src="../iconos/salir.png" border="0" alt="Salir" width="50px" height="auto"/> Salir del sistema</a></td></tr>';
+		echo '<tr><td><a href="salir.php" title="Salir del sistema"><img src="../iconos/salir.png" border="0" alt="Salir" width="50px" /> Salir del sistema</a></td></tr>';
 		echo '</table>';
 		echo '</div>';
 		echo '</body>';

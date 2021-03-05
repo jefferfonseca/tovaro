@@ -13,7 +13,7 @@ if(isset($_COOKIE['VotaDatAdmin'])) {
 	echo '<title>'.$leer['institucion'].' - Resultados votaciones</title>';
 	echo '<meta  content="text/html;" charset= "UTF-8"/>';
 	echo '<link href="../estilo4.css" rel="stylesheet" type="text/css" />';
-	echo '<link rel="icon" href="iconos/EscudoColegio.png" type="image/png" width=70px height=90px/>';
+	echo '<link rel="icon" href="../iconos/EscudoColegio.png" type="image/png" width=70px height=90px/>';
 	echo '</head>';
 	echo '<body>';
 	echo '<h1>'.$leer['institucion'].'</h1>';
@@ -24,10 +24,10 @@ if(isset($_COOKIE['VotaDatAdmin'])) {
 	
 		echo '<div align="center">';
 		//echo '<p class="txtinicial">RESULTADOS '.cambia_mayuscula($row5['descripcion']).'</p>';
-		echo '<p class="txtinicial">RESULTADOS CANDIDATOS A LA PERSONERÍA</p>';
+		echo '<p class="txtinicial" style="color:#221C76;">RESULTADOS CANDIDATOS A LA PERSONERÍA</p>';
 		echo '<table>';
 		echo '<thead><tr><th>GRADO</th>';		
-		$resp4=mysql_query(sprintf("select nombres,apellidos from candidatos where representante=%d order by apellidos DESC",$row5['id'],$link));		
+		$resp4=mysql_query(sprintf("select nombres,apellidos from candidatos where representante=%d order by Id ASC",$row5['id'],$link));		
 		$w=0;
 		while($row4 = mysql_fetch_array($resp4)) {
 			echo '<th>';

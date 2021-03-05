@@ -37,7 +37,7 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 			}
 			if ($duplica==1) {
 					include_once("encabezado.html");
-					print "<strong>Ya existe un estudiante con este número de documento<br />";
+					print "<strong>Ya existe un estudiante con este n&uacutemero de documento<br />";
 					print"<br /><a href='javascript:history.go(-1)'>Volver al formulario</a></strong></div></body></html>";
 					exit;
 			}
@@ -58,7 +58,7 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 	mysql_query($cons_sql5,$link);
 
 		}
-		//****Actualizar información de estudiante*******
+		//****Actualizar informaciï¿½n de estudiante*******
 		if (isset($_POST['edita_est'])) {
 			if ((borra_espacios($_POST['nom_est'])!="")and(borra_espacios($_POST['ape_est'])!="")and(borra_espacios($_POST['doc_est'])!="")) {
 				$fgrado=$_GET['id'];
@@ -97,7 +97,7 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 				echo '<td style="text-align:right;"><label for="nom_est">';
 				echo '<strong>Nombres:</strong>';
 				echo '</label></td>';
-				echo '<td><input type="text" name="nom_est" size="30" maxlength="50" title="Escriba los nombres del estudiante" />';
+				echo '<td><input type="text" name="nom_est"x size="30" maxlength="50" title="Escriba los nombres del estudiante" />';
 				echo '</td></tr>';
 				echo '<tr>';
 				echo '<td style="text-align:right;"><label for="ape_est">';
@@ -109,13 +109,13 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 				echo '<td style="text-align:right;"><label for="doc_est">';
 				echo '<strong>Documento:</strong>';
 				echo '</label></td>';
-				echo '<td><input type="text" name="doc_est" size="30" maxlength="50" title="Escriba el número de documento del estudiante" />';
+				echo '<td><input type="text" name="doc_est" size="30" maxlength="50" title="Escriba el n&uacutemero de documento del estudiante" />';
 				echo '</td></tr>';
 				echo '<tr>';
 				echo '<td style="text-align:right;"><label for="clave_est">';
-				echo '<strong>Contraseña:</strong>';
+				echo '<strong>Contrase&ntildea:</strong>';
 				echo '</label></td>';
-				echo '<td><input type="password" name="clave_est" size="30" maxlength="50" title="Escriba la contraseña de acceso del estudiante" />';
+				echo '<td><input type="password" name="clave_est" size="30" maxlength="50" title="Escriba la contrase&tildea de acceso del estudiante" />';
 				echo '</td></tr>';
 
 				echo '<tr><td class="cen" colspan="2"><input type="submit" name="envia_estudiante" value="Guardar" title="Agregar estudiante" />&nbsp&nbsp&nbsp&nbsp';
@@ -155,9 +155,9 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 					echo '</td></tr>';
 					echo '<tr>';
 					echo '<td style="text-align:right;"><label for="clave_est">';
-					echo '<strong>Contraseña:</strong>';
+					echo '<strong>Contrase&ntildea:</strong>';
 					echo '</label></td>';
-					echo '<td><input type="password" name="clave_est" size="30" maxlength="50" title="Escriba la contraseña de acceso del estudiante" />';
+					echo '<td><input type="password" name="clave_est" size="30" maxlength="50" title="Escriba la contrase&ntildea de acceso del estudiante" />';
 					echo '</td></tr>';
 				echo '<input type="hidden" name="identificador" value="'.$row4['id'].'" />';
 
@@ -180,9 +180,9 @@ if ($_COOKIE['VotaDatAdmin']==1) {
                     $resp9=mysql_query(sprintf("select id from voto where id_estudiante=%d",$row5['id']),$link);
                     if (!$row9 = mysql_fetch_array($resp9)) {
         				echo '<br /><div class="cen"><strong>';
-	        			echo '¿Desea borrar el estudiante '.$row5['apellidos'].' '.$row5['nombres'].' del sistema? ';
+	        			echo 'Â¿Desea borrar el estudiante '.$row5['apellidos'].' '.$row5['nombres'].' del sistema? ';
 		        		echo '<a href="consulta.php?id='.$_GET['id'].'&est='.$_GET['est'].'&elimina=1" title="Borrar estudiante del sistema">Si</a>&nbsp&nbsp&nbsp&nbsp';
-			        	echo '<a href="consulta.php?id='.$_GET['id'].'" title="Cancelar la eliminación del estudiante">No</a>';
+			        	echo '<a href="consulta.php?id='.$_GET['id'].'" title="Cancelar la eliminaci&oacuten del estudiante">No</a>';
 				        echo '</strong></div>';
                     }
                     else {
@@ -240,7 +240,7 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 			}
 			$ContEst=0;
 			$VerAccion="Registro";
-			$resp=mysql_query(sprintf("select * from estudiantes where grado=%d order by apellidos",$_GET['id']),$link);
+			$resp=mysql_query(sprintf("select * from estudiantes where grado=%d order by id",$_GET['id']),$link);
 			while($row = mysql_fetch_array($resp)) {
 				echo '<tr>';
 				echo '<td>'.$row['apellidos'].' '.$row['nombres'].'</td>';
@@ -269,11 +269,11 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 			$ContEst=0;
 			$VerAccion="Registro";
 			if($_GET['votos']=="si"){
-				$resp=mysql_query(sprintf("select distinct estudiantes.id, nombres,apellidos,documento from estudiantes,voto where estudiantes.grado=%d and estudiantes.id=id_estudiante order by apellidos",$_GET['id']),$link);
+				$resp=mysql_query(sprintf("select distinct estudiantes.id, nombres,apellidos,documento from estudiantes,voto where estudiantes.grado=%d and estudiantes.id=id_estudiante order by id",$_GET['id']),$link);
 				echo '<thead><tr><th colspan="2">ESTUDIANTES CON VOTO</th></tr></thead>';
 			}
 			if($_GET['votos']=="no"){
-				$resp=mysql_query(sprintf("select nombres,apellidos,documento from estudiantes where estudiantes.grado=%d and estudiantes.id not in (select id_estudiante from voto) order by apellidos",$_GET['id']),$link);
+				$resp=mysql_query(sprintf("select nombres,apellidos,documento from estudiantes where estudiantes.grado=%d and estudiantes.id not in (select id_estudiante from voto) order by id",$_GET['id']),$link);
 				echo '<thead><tr><th colspan="2">ESTUDIANTES SIN VOTO</th></tr></thead>';
 			}
 			if(isset($resp)) {
@@ -306,7 +306,7 @@ if ($_COOKIE['VotaDatAdmin']==1) {
 else {
         include_once("encabezado.html");
         echo '<table>';
-        echo '<tr><td class="cen"><strong>Su sesión ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
+        echo '<tr><td class="cen"><strong>Su sesi&oacuten ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
         echo '</table></div></body></html>';
 }
 mysql_close($link);

@@ -55,7 +55,7 @@ mysql_close($link);
 else {
         include_once("encabezado.html");
         echo '<table>';
-        echo '<tr><td class="cen"><strong>Su sesión ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
+        echo '<tr><td class="cen"><strong>Su sesi&oacuten ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
         echo '</table></div></body></html>';
 }
 ?>

@@ -8,11 +8,11 @@ $leer= mysql_fetch_array($estado);
 //****** Verificamos si existe la cookie *****/
 if(isset($_COOKIE['VotaDatAdmin'])) {
 	
-	//******Verificar que existan categorías para crear candidatos
+	//******Verificar que existan categorï¿½as para crear candidatos
 	$resp8=mysql_query("select * from categorias",$link);
     if (!$row8 = mysql_fetch_array($resp8)) {		
 		include_once("encabezado.html");
-			print "<strong>Debe crear primero las categorias de votación<br />";			
+			print "<strong>Debe crear primero las categorias de votaci&oacuten<br />";			
 			exit;
 	}		
 	
@@ -46,7 +46,7 @@ if(isset($_COOKIE['VotaDatAdmin'])) {
 mysql_query($cons_sql5,$link);
 
 	}
-	//****Actualizar información de candidato*******
+	//****Actualizar informaciï¿½n de candidato*******
 	if (isset($_POST['edita_candi'])) {
 		if (($_POST['nombres_candi']!="")and($_POST['representante_candi']!="")) {
 			$fnombres_candi=borra_espacios($_POST['nombres_candi']);
@@ -77,6 +77,7 @@ mysql_query($cons_sql5,$link);
 	echo '<head>';
 	echo '<title>'.$leer['institucion'].' - Lista de candidatos</title>';
 	echo '<link href="../estilo4.css" rel="stylesheet" type="text/css" />';
+	echo '<link rel="icon" href="../iconos/EscudoColegio.png" type="image/png" width=70px height=90px/>';
 	echo '</head>';
 	echo '<body>';
 	echo '<h1>'.$leer['institucion'].'</h1>';
@@ -178,13 +179,13 @@ mysql_query($cons_sql5,$link);
 		    	$resp3=mysql_query(sprintf("select id from voto where candidato=%d",$row5['id']),$link);
                 if (!$row3 = mysql_fetch_array($resp3)) {
                     echo '<br /><div class="cen"><strong>';
-	    		    echo '¿Desea borrar el candidato '.$row5['nombres'].' '.$row5['apellidos'].' del sistema? ';
+	    		    echo 'Â¿Desea borrar el candidato '.$row5['nombres'].' '.$row5['apellidos'].' del sistema? ';
     	    		echo '<a href="candidatos.php?id='.$_GET['id'].'&elimina=1" title="Borrar candidato del sistema">Si</a>&nbsp&nbsp&nbsp&nbsp';
-	    	    	echo '<a href="candidatos.php" title="Cancelar la eliminación del candidato">No</a>';
+	    	    	echo '<a href="candidatos.php" title="Cancelar la eliminaci&oacuten del candidato">No</a>';
 		    	    echo '</strong></div>';
                 }
                 else {
-                    echo '<br /><strong>Advertencia: No puede borrar el candidato '.$row5['nombres'].' '.$row5['apellidos'].', ya que existen votos para él.</strong>';
+                    echo '<br /><strong>Advertencia: No puede borrar el candidato '.$row5['nombres'].' '.$row5['apellidos'].', ya que existen votos para &eacutel.</strong>';
                 }
 		}
 		else {
@@ -229,7 +230,7 @@ mysql_query($cons_sql5,$link);
 	echo '<br /><table>';
 	echo '<thead><tr><th colspan="2">CANDIDATO</th><th colspan="3">OPCIONES</th></tr></thead>';
 	$ContAdm=0;
-	$resp=mysql_query(sprintf("select * from candidatos order by representante,apellidos DESC"),$link);
+	$resp=mysql_query(sprintf("select * from candidatos order by Id ASC"),$link);
 	while($row = mysql_fetch_array($resp)) {
 			echo '<tr>';
 			echo '<td class="cen">';
@@ -260,7 +261,7 @@ mysql_query($cons_sql5,$link);
 			$ContAdm=$ContAdm+1;
 	}
 	if($ContAdm==0) {
-		echo '<tr><td colspan="5"><strong>No existe información para mostrar</strong></td></tr>';
+		echo '<tr><td colspan="5"><strong>No existe informaci&oacuten para mostrar</strong></td></tr>';
 	}
 	echo '</table><br />';
 	echo '</div>';	
@@ -270,7 +271,7 @@ mysql_query($cons_sql5,$link);
 else {
 	include_once("encabezado.html");
       	echo '<table>';
-        echo '<tr><td class="cen"><strong>Su sesión ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
+        echo '<tr><td class="cen"><strong>Su sesi&oacuten ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
         echo '</table></div></body></html>';
 }
 mysql_close($link);

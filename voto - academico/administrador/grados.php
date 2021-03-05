@@ -51,7 +51,7 @@ if(isset($_COOKIE['VotaDatAdmin'])) {
 mysql_query($cons_sql5,$link);
 
 	}
-	//****Actualizar información del grado*******
+	//****Actualizar informaciï¿½n del grado*******
 	if (isset($_POST['edita_grado'])) {
 		if (($_POST['nombre_grado']!="")) {
 			$fnombre_grado=cambia_mayuscula(borra_espacios($_POST['nombre_grado']));
@@ -78,12 +78,13 @@ mysql_query($cons_sql5,$link);
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
 	echo '<html>';
 	echo '<head>';
-	echo '<title>'.$leer['institucion'].' - Configuración grados</title>';
+	echo '<title>'.$leer['institucion'].' - ConfiguraciÃ³n grados</title>';
 	echo '<link href="../estilo4.css" rel="stylesheet" type="text/css" />';
-	echo '</head>';
+	echo '<link rel="icon" href="../iconos/EscudoColegio.png" type="image/png" width=70px height=90px/>';
+	echo '<meta charset= "UTF-8"/></head>';
 	echo '<body>';
 	echo '<h1>'.$leer['institucion'].'</h1>';
-	echo '<h2>CONFIGURACIÓN GRADOS</h2>';
+	echo '<h2>CONFIGURACIÃ“N GRADOS</h2>';
 	echo '<div align="center">';	
 	//*****Formulario para agregar un grado *******
 	if((isset($_GET['agrega']))and($_GET['agrega']=="ok")) { 
@@ -140,9 +141,9 @@ mysql_query($cons_sql5,$link);
 				$resp9=mysql_query(sprintf("select id from estudiantes where grado=%d",$row5['id']),$link);
 				if (!$row9 = mysql_fetch_array($resp9)) {
 					echo '<br /><div class="cen"><strong>';
-					echo '¿Desea borrar el grado '.$row5['grado'].' del sistema? ';
+					echo 'Â¿Desea borrar el grado '.$row5['grado'].' del sistema? ';
 					echo '<a href="grados.php?id='.$_GET['id'].'&elimina=1" title="Borrar grado del sistema">Si</a>&nbsp&nbsp&nbsp&nbsp';
-					echo '<a href="grados.php" title="Cancelar la eliminación del grado">No</a>';
+					echo '<a href="grados.php" title="Cancelar la eliminaci&oacuten del grado">No</a>';
 					echo '</strong></div>';
 				}
 				else {
@@ -185,7 +186,7 @@ mysql_query($cons_sql5,$link);
 			$ContAdm=$ContAdm+1;		
 	}
 	if($ContAdm==0) {
-		echo '<tr><td colspan="3"><strong>No existe información para mostrar</strong></td></tr>';
+		echo '<tr><td colspan="3"><strong>No existe informaci&oacuten para mostrar</strong></td></tr>';
 	}
 	echo '</table><br />';
 	echo '</div>';
@@ -195,7 +196,7 @@ mysql_query($cons_sql5,$link);
 else {
 	include_once("encabezado.html");
       	echo '<table>';
-        echo '<tr><td class="cen"><strong>Su sesión ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
+        echo '<tr><td class="cen"><strong>Su sesi&oacuten ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
         echo '</table></div></body></html>';
 }
 mysql_close($link);

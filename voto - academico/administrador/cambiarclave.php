@@ -18,14 +18,14 @@ valida(array("requerido"=>"clave_actual,clave1_nueva,clave2_nueva"));
 
 if (strlen($_POST['clave1_nueva']) < 4) {
         include_once("encabezado.html");
-	print "<strong>La contraseña debe ser como mínimo de 4 caracteres<br />";
+	print "<strong>La contrase&ntildea debe ser como m&iacutenimo de 4 caracteres<br />";
         print"<br /><a href='javascript:history.go(-1)'>Volver al formulario</a></strong></div></body></html>";
         exit;
 }
 
 if ($_POST['clave1_nueva']!=$_POST['clave2_nueva']) {
         include_once("encabezado.html");
-        print "<strong>La confirmación de la contraseña está mal escrita<br />";
+        print "<strong>La confirmaci&ntilden de la contrase&ntildea estÃ¡ mal escrita<br />";
         print"<br /><a href='javascript:history.go(-1)'>Volver al formulario</a></strong></div></body></html>";
         exit;
 }
@@ -42,7 +42,7 @@ if ($row = mysql_fetch_array($resp)) {
 }
 else {
         include_once("encabezado.html");
-        print "<strong>La contraseña actual no corresponde<br />";
+        print "<strong>La contrase&ntildea actual no corresponde<br />";
        	print"<br /><a href='javascript:history.go(-1)'>Volver al formulario</a></strong></div></body></html>";
        	exit;
 }
@@ -65,7 +65,7 @@ mysql_close($link);
 else {
         include_once("encabezado.html");
         echo '<table>';
-        echo '<tr><td class="cen"><strong>Su sesión ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
+        echo '<tr><td class="cen"><strong>Su sesi&oacuten ha finalizado, por favor vuelva a ingresar al sistema</strong></td></tr>';
         echo '</table></div></body></html>';
 }
 ?>
