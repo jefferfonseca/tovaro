@@ -42,7 +42,7 @@ if(isset($_COOKIE['VotaDatAdmin'])) {
 		$resp=mysql_query("select * from grados",$link);
 		$ttl_acum=0;
 		while($row = mysql_fetch_array($resp)) {			
-			$resp2=mysql_query(sprintf("select id from candidatos where representante=%d order by apellidos DESC",$row5['id'],$link));
+			$resp2=mysql_query(sprintf("select id from candidatos where representante=%d order by Id ASC",$row5['id'],$link));
 			echo '<tr>';
 			$ContCol=0;
 			$ContRow=0;
